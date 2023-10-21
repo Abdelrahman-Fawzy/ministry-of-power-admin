@@ -1,0 +1,24 @@
+.breadcrumb-box {
+  border-radius: var(--8, 8px);
+  border: 0.5px solid #E3E3E3;
+  background: #F7F8FA;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1em;
+  margin-bottom: 1.5em;
+  li {
+    a {
+      font-size: 16px;
+      font-weight: 700;
+      color: #212B36;
+      text-decoration: none;
+    }
+    span {
+      font-weight: 700;
+      font-size: 16px;
+      color: #637381;
+    }
+  }
+}

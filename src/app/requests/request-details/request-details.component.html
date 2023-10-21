@@ -1,0 +1,585 @@
+<app-breadcrumb [icon]="'assets/images/icons/ShoppingBagOpen.svg'" [list]="breadCrumbList"></app-breadcrumb>
+
+<div class="row">
+  <div class="col-lg-9">
+    <div class="container-white-box flex flex-col gap-25 mb-20">
+      <div class="header flex jc-sb ai-c">
+        <h5>نوع الحساب الذى تريد إنشاءة</h5>
+      </div>
+      <div class="body">
+        <ul class="list-unstyled flex jc-sb">
+          <li>
+            <div class="box">
+              <div class="img">
+                <img src="assets/images/icons/user.svg" alt="">
+              </div>
+              <span>خاص</span>
+            </div>
+          </li>
+          <li>
+            <div class="box">
+              <div class="img">
+                <img src="assets/images/icons/governorate.svg" alt="">
+              </div>
+              <span>حكومى</span>
+            </div>
+          </li>
+          <li>
+            <div class="box">
+              <div class="img">
+                <img src="assets/images/icons/building.svg" alt="">
+              </div>
+              <span>نقابات</span>
+            </div>
+          </li>
+          <li>
+            <div class="box">
+              <div class="img">
+                <img src="assets/images/icons/users.svg" alt="">
+              </div>
+              <span>جمعيات</span>
+            </div>
+          </li>
+          <li>
+            <div class="box">
+              <div class="img">
+                <img src="assets/images/icons/trainer.svg" alt="">
+              </div>
+              <span>مدرب</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container-white-box flex flex-col gap-25 mb-20">
+      <div class="header flex jc-sb ai-c">
+        <h5>معلومات التواصل حتى يتم التواصل معك حين قبول طلبك</h5>
+      </div>
+      <div class="body flex flex-col gap-20">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="form-group">
+              <label for="companyAddress">عنوان الشركة</label>
+              <textarea name="" id="companyAddress" rows="5" class="form-control" placeholder="اكتب عنوان الشركة بالكامل"></textarea>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="name">البريد الالكترونى</label>
+                  <div class="iconic-form-control">
+                    <div class="img">
+                      <img src="assets/images/icons/envelope.svg" alt="">
+                    </div>
+                    <input type="text" id="name" placeholder="hussain@finesse.com">
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="name">فاكس</label>
+                  <div class="iconic-form-control">
+                    <div class="img">
+                      <img src="assets/images/icons/fax.svg" alt="">
+                    </div>
+                    <input type="text" id="name" placeholder="654654153">
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="name">رقم الهاتف</label>
+                  <div class="iconic-form-control">
+                    <div class="img">
+                      <img src="assets/images/icons/black_phone.svg" alt="">
+                    </div>
+                    <input type="text" id="name" placeholder="01158202283">
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="name">رقم التأكيد</label>
+                  <div class="iconic-form-control">
+                    <ul class="list-unstyled flex jc-sb full-width">
+                      <li>4</li>
+                      <div class="divider"></div>
+                      <li>4</li>
+                      <div class="divider"></div>
+                      <li>8</li>
+                      <div class="divider"></div>
+                      <li>7</li>
+                      <div class="divider"></div>
+                      <li>3</li>
+                      <div class="divider"></div>
+                      <li>5</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="form-group">
+              <div class="custom-file-upload">
+                <label class="mainLabel">
+                  <span>شعار الشركة</span>
+                  <img src="assets/images/icons/black_hint.svg" alt="">
+                </label>
+                <div class="flex ai-c gap-15 full-width">
+                  <div class="upload-box">
+                    <div class="upload center-flex">
+                      <input id="companyContract" (change)="getFileName($event)" type="file" hidden>
+                      <label for="companyContract">اختر الملف</label>
+                    </div>
+                    <div class="file-info">
+                      <span id="file-chosen">File Name.pdf</span>
+                      <div class="img">
+                        <img src="assets/images/icons/pdf.svg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container-white-box flex flex-col gap-25 mb-20">
+      <div class="header flex jc-sb ai-c">
+        <h5>المرفقات المطلوبة</h5>
+      </div>
+      <div class="body">
+        <div class="files flex jc-sb">
+          <div class="part-one full-width">
+            <div class="custom-file-upload">
+              <label class="mainLabel">
+                <span>شعار الشركة</span>
+                <img src="assets/images/icons/black_hint.svg" alt="">
+              </label>
+              <div class="flex ai-c gap-15 full-width">
+                <div class="upload-box">
+                  <div class="upload center-flex">
+                    <input id="companyContract" (change)="getFileName($event)" type="file" hidden>
+                    <label for="companyContract">اختر الملف</label>
+                  </div>
+                  <div class="file-info">
+                    <span id="file-chosen">File Name.pdf</span>
+                    <div class="img">
+                      <img src="assets/images/icons/pdf.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="status">
+                  <div class="img">
+                    <img src="assets/images/icons/fullGreenDownload.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="custom-file-upload">
+              <label class="mainLabel">
+                <span>شعار الشركة</span>
+                <img src="assets/images/icons/black_hint.svg" alt="">
+              </label>
+              <div class="flex ai-c gap-15 full-width">
+                <div class="upload-box">
+                  <div class="upload center-flex">
+                    <input id="companyContract" (change)="getFileName($event)" type="file" hidden>
+                    <label for="companyContract">اختر الملف</label>
+                  </div>
+                  <div class="file-info">
+                    <span id="file-chosen">File Name.pdf</span>
+                    <div class="img">
+                      <img src="assets/images/icons/pdf.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="status">
+                  <div class="img">
+                    <img src="assets/images/icons/fullGreenDownload.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="custom-file-upload">
+              <label class="mainLabel">
+                <span>شعار الشركة</span>
+                <img src="assets/images/icons/black_hint.svg" alt="">
+              </label>
+              <div class="flex ai-c gap-15 full-width">
+                <div class="upload-box">
+                  <div class="upload center-flex">
+                    <input id="companyContract" (change)="getFileName($event)" type="file" hidden>
+                    <label for="companyContract">اختر الملف</label>
+                  </div>
+                  <div class="file-info">
+                    <span id="file-chosen">File Name.pdf</span>
+                    <div class="img">
+                      <img src="assets/images/icons/pdf.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="status">
+                  <div class="img">
+                    <img src="assets/images/icons/fullGreenDownload.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="custom-file-upload">
+              <label class="mainLabel">
+                <span>شعار الشركة</span>
+                <img src="assets/images/icons/black_hint.svg" alt="">
+              </label>
+              <div class="flex ai-c gap-15 full-width">
+                <div class="upload-box">
+                  <div class="upload center-flex">
+                    <input id="companyContract" (change)="getFileName($event)" type="file" hidden>
+                    <label for="companyContract">اختر الملف</label>
+                  </div>
+                  <div class="file-info">
+                    <span id="file-chosen">File Name.pdf</span>
+                    <div class="img">
+                      <img src="assets/images/icons/pdf.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="status">
+                  <div class="img">
+                    <img src="assets/images/icons/fullGreenDownload.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="custom-file-upload">
+              <label class="mainLabel">
+                <span>شعار الشركة</span>
+                <img src="assets/images/icons/black_hint.svg" alt="">
+              </label>
+              <div class="flex ai-c gap-15 full-width">
+                <div class="upload-box">
+                  <div class="upload center-flex">
+                    <input id="companyContract" (change)="getFileName($event)" type="file" hidden>
+                    <label for="companyContract">اختر الملف</label>
+                  </div>
+                  <div class="file-info">
+                    <span id="file-chosen">File Name.pdf</span>
+                    <div class="img">
+                      <img src="assets/images/icons/pdf.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="status">
+                  <div class="img">
+                    <img src="assets/images/icons/fullGreenDownload.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="custom-file-upload">
+              <label class="mainLabel">
+                <span>شعار الشركة</span>
+                <img src="assets/images/icons/black_hint.svg" alt="">
+              </label>
+              <div class="flex ai-c gap-15 full-width">
+                <div class="upload-box">
+                  <div class="upload center-flex">
+                    <input id="companyContract" (change)="getFileName($event)" type="file" hidden>
+                    <label for="companyContract">اختر الملف</label>
+                  </div>
+                  <div class="file-info">
+                    <span id="file-chosen">File Name.pdf</span>
+                    <div class="img">
+                      <img src="assets/images/icons/pdf.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="status">
+                  <div class="img">
+                    <img src="assets/images/icons/fullGreenDownload.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="custom-file-upload">
+              <label class="mainLabel">
+                <span>شعار الشركة</span>
+                <img src="assets/images/icons/black_hint.svg" alt="">
+              </label>
+              <div class="flex ai-c gap-15 full-width">
+                <div class="upload-box">
+                  <div class="upload center-flex">
+                    <input id="companyContract" (change)="getFileName($event)" type="file" hidden>
+                    <label for="companyContract">اختر الملف</label>
+                  </div>
+                  <div class="file-info">
+                    <span id="file-chosen">File Name.pdf</span>
+                    <div class="img">
+                      <img src="assets/images/icons/pdf.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="status">
+                  <div class="img">
+                    <img src="assets/images/icons/fullGreenDownload.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="part-two full-width">
+            <div class="custom-file-upload">
+              <label class="mainLabel">
+                <span>شعار الشركة</span>
+                <img src="assets/images/icons/black_hint.svg" alt="">
+              </label>
+              <div class="flex ai-c gap-15 full-width">
+                <div class="upload-box">
+                  <div class="upload center-flex">
+                    <input id="companyContract" (change)="getFileName($event)" type="file" hidden>
+                    <label for="companyContract">اختر الملف</label>
+                  </div>
+                  <div class="file-info">
+                    <span id="file-chosen">File Name.pdf</span>
+                    <div class="img">
+                      <img src="assets/images/icons/pdf.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="status">
+                  <div class="img">
+                    <img src="assets/images/icons/fullGreenDownload.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="custom-file-upload">
+              <label class="mainLabel">
+                <span>شعار الشركة</span>
+                <img src="assets/images/icons/black_hint.svg" alt="">
+              </label>
+              <div class="flex ai-c gap-15 full-width">
+                <div class="upload-box">
+                  <div class="upload center-flex">
+                    <input id="companyContract" (change)="getFileName($event)" type="file" hidden>
+                    <label for="companyContract">اختر الملف</label>
+                  </div>
+                  <div class="file-info">
+                    <span id="file-chosen">File Name.pdf</span>
+                    <div class="img">
+                      <img src="assets/images/icons/pdf.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="status">
+                  <div class="img">
+                    <img src="assets/images/icons/fullGreenDownload.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="custom-file-upload">
+              <label class="mainLabel">
+                <span>شعار الشركة</span>
+                <img src="assets/images/icons/black_hint.svg" alt="">
+              </label>
+              <div class="flex ai-c gap-15 full-width">
+                <div class="upload-box">
+                  <div class="upload center-flex">
+                    <input id="companyContract" (change)="getFileName($event)" type="file" hidden>
+                    <label for="companyContract">اختر الملف</label>
+                  </div>
+                  <div class="file-info">
+                    <span id="file-chosen">File Name.pdf</span>
+                    <div class="img">
+                      <img src="assets/images/icons/pdf.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="status">
+                  <div class="img">
+                    <img src="assets/images/icons/fullGreenDownload.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="custom-file-upload">
+              <label class="mainLabel">
+                <span>شعار الشركة</span>
+                <img src="assets/images/icons/black_hint.svg" alt="">
+              </label>
+              <div class="flex ai-c gap-15 full-width">
+                <div class="upload-box">
+                  <div class="upload center-flex">
+                    <input id="companyContract" (change)="getFileName($event)" type="file" hidden>
+                    <label for="companyContract">اختر الملف</label>
+                  </div>
+                  <div class="file-info">
+                    <span id="file-chosen">File Name.pdf</span>
+                    <div class="img">
+                      <img src="assets/images/icons/pdf.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="status">
+                  <div class="img">
+                    <img src="assets/images/icons/fullGreenDownload.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="custom-file-upload">
+              <label class="mainLabel">
+                <span>شعار الشركة</span>
+                <img src="assets/images/icons/black_hint.svg" alt="">
+              </label>
+              <div class="flex ai-c gap-15 full-width">
+                <div class="upload-box">
+                  <div class="upload center-flex">
+                    <input id="companyContract" (change)="getFileName($event)" type="file" hidden>
+                    <label for="companyContract">اختر الملف</label>
+                  </div>
+                  <div class="file-info">
+                    <span id="file-chosen">File Name.pdf</span>
+                    <div class="img">
+                      <img src="assets/images/icons/pdf.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="status">
+                  <div class="img">
+                    <img src="assets/images/icons/fullGreenDownload.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="custom-file-upload">
+              <label class="mainLabel">
+                <span>شعار الشركة</span>
+                <img src="assets/images/icons/black_hint.svg" alt="">
+              </label>
+              <div class="flex ai-c gap-15 full-width">
+                <div class="upload-box">
+                  <div class="upload center-flex">
+                    <input id="companyContract" (change)="getFileName($event)" type="file" hidden>
+                    <label for="companyContract">اختر الملف</label>
+                  </div>
+                  <div class="file-info">
+                    <span id="file-chosen">File Name.pdf</span>
+                    <div class="img">
+                      <img src="assets/images/icons/pdf.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="status">
+                  <div class="img">
+                    <img src="assets/images/icons/fullGreenDownload.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="custom-file-upload">
+              <label class="mainLabel">
+                <span>شعار الشركة</span>
+                <img src="assets/images/icons/black_hint.svg" alt="">
+              </label>
+              <div class="flex ai-c gap-15 full-width">
+                <div class="upload-box">
+                  <div class="upload center-flex">
+                    <input id="companyContract" (change)="getFileName($event)" type="file" hidden>
+                    <label for="companyContract">اختر الملف</label>
+                  </div>
+                  <div class="file-info">
+                    <span id="file-chosen">File Name.pdf</span>
+                    <div class="img">
+                      <img src="assets/images/icons/pdf.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="status">
+                  <div class="img">
+                    <img src="assets/images/icons/fullGreenDownload.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="request-user">
+      <div class="user">
+        <div class="user-info">
+          <div class="img">
+            <img src="assets/images/main_assets/academyLogo.png" alt="">
+            <span></span>
+          </div>
+          <div class="info">
+            <h4>اكاديمية 6 أكتوبر</h4>
+            <div class="img user-status">
+              <img src="assets/images/icons/approved.svg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="request-status">
+          <h5>حالة الطلب</h5>
+          <span class="status">إنتظار</span>
+        </div>
+        <div class="actions">
+          <button class="primary-outline-button add-notification">
+            <div class="img">
+              <img src="assets/images/icons/notifiaction.svg" alt="">
+              <span>+</span>
+            </div>
+            <span>إضافة إشعار</span>
+          </button>
+          <button class="primary-button">
+            <div class="img">
+              <img src="assets/images/icons/video.svg" alt="">
+            </div>
+          </button>
+          <button class="primary-third-button">
+            <div class="img">
+              <img src="assets/images/icons/greenDots.svg" alt="">
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="admin-actions flex flex-col">
+      <button class="white-button">
+        <div class="img">
+          <img src="assets/images/icons/fullGreenDownload.svg" alt="">
+        </div>
+        <span>تحميل جميع المرفقات</span>
+      </button>
+      <button class="primary-button accept-request">
+        <div class="img">
+          <img src="assets/images/icons/correct.svg" alt="">
+        </div>
+        <span>قبول الطلب</span>
+      </button>
+      <button class="white-button">
+        <div class="img">
+          <img src="assets/images/icons/warning.svg" alt="">
+        </div>
+        <span>رفض الطلب مع تعديل للمستخدم</span>
+      </button>
+      <button class="white-button">
+        <div class="img">
+          <img src="assets/images/icons/stop.svg" alt="">
+        </div>
+        <span>رفض الطلب نهائيا</span>
+      </button>
+    </div>
+  </div>
+</div>

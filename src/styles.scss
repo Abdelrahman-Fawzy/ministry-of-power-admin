@@ -1,1 +1,110 @@
-/* You can add global styles to this file, and also import other style files */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+@import './assets/abstracts/main';
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  background: #F6F6F6;
+  text-align: right;
+}
+
+.main-page {
+  min-height: 720px;
+}
+
+.request-table {
+  table {
+    border: 1px solid #E0E0E0;
+    text-align: right;
+    font-family: 'Cairo', sans-serif;
+    th {
+      background: #F9F9F9;
+      text-align: right;
+      &:not(:first-child, :last-child) { min-width: 10rem; }
+    }
+    td {
+      text-align: right;
+      font-size: 16px;
+      color: #424242;
+      font-weight: 500;
+      background-color: #FFF;
+      border-bottom: 1px solid #E0E0E0;
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .img {
+          width: 40px;
+          height: 40px;
+        }
+        .info {
+          h5 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #424242;
+          }
+          span {
+            font-size: 14px;
+            font-weight: 700;
+            color: #424242;
+          }
+        }
+      }
+      &.status {
+        span {
+          border-radius: 10px;
+          border: 2px solid;
+          min-width: 130px;
+          display: block;
+          text-align: center;
+          padding: 6px;
+          font-weight: 700;
+        }
+        .rejected {
+          border-color: #9747FF;
+          background: rgba(151, 71, 255, 0.26);
+          color: #9747FF;
+        }
+        .pending {
+          border: 2px solid #948601;
+          background: rgba(225, 203, 0, 0.26);
+          color: #948601;
+        }
+        .full-rejected {
+          border: 2px solid #D40016;
+          background: rgba(212, 0, 22, 0.26);
+          color: var(--red, #D40016);
+        }
+        .accepted {
+          border: 2px solid #008D0E;
+          background: rgba(0, 141, 14, 0.26);
+          color: var(--green, #008D0E);
+        }
+      }
+      button.download-attachments {
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        background: var(--white, #FFF);
+        box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 0px 0px 1px rgba(103, 110, 118, 0.16), 0px 2px 5px 0px rgba(103, 110, 118, 0.08);
+        border: none;
+        color: var(--green, #008D0E);
+        text-align: center;
+        font-weight: 700;
+        padding: 10px 30px;
+
+      }
+      button.actions {
+        .img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}

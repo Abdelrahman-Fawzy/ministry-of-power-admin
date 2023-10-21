@@ -1,0 +1,113 @@
+<app-breadcrumb [icon]="'assets/images/icons/ChartPieSlice.svg'" [list]="breadCrumbList"></app-breadcrumb>
+
+<div class="stats mb-40">
+  <h2 class="page-title">احصائيات</h2>
+  <div class="flex jc-sb gap-10">
+    <div class="box">
+      <div class="info">
+        <h4>عدد المستخدمين</h4>
+        <span>10,390</span>
+      </div>
+      <div class="img">
+        <img src="assets/images/home/books.png" alt="">
+      </div>
+    </div>
+    <div class="box">
+      <div class="info">
+        <h4>طلبات قيد الانتظار</h4>
+        <span>525</span>
+      </div>
+      <div class="img">
+        <img src="assets/images/home/cup.png" alt="">
+      </div>
+    </div>
+    <div class="box">
+      <div class="info">
+        <h4>مستخدمين موثقين</h4>
+        <span>525</span>
+      </div>
+      <div class="img">
+        <img src="assets/images/home/money.png" alt="">
+      </div>
+    </div>
+    <div class="box">
+      <div class="info">
+        <h4>داخل نطاق العمل</h4>
+        <span>525</span>
+      </div>
+      <div class="img">
+        <img src="assets/images/home/money.png" alt="">
+      </div>
+    </div>
+    <div class="box">
+      <div class="info">
+        <h4>خارج نطاق العمل</h4>
+        <span>525</span>
+      </div>
+      <div class="img">
+        <img src="assets/images/home/money.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="users">
+  <div class="header">
+    <h2 class="page-title">المستخدمين</h2>
+    <div class="actions">
+      <div class="iconic-form-control">
+        <div class="img">
+          <img src="assets/images/icons/search.svg" alt="">
+        </div>
+        <input type="text" placeholder="بحث">
+      </div>
+      <button class="white-button">
+        <img src="assets/images/icons/ordering.svg" alt="">
+      </button>
+      <button class="white-button">
+        <img src="assets/images/icons/alignment.svg" alt="">
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-3" *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]">
+      <div class="box">
+        <div class="info">
+          <div class="user-info">
+            <div class="img">
+              <img src="assets/images/main_assets/academyLogo.png" alt="">
+            </div>
+            <div class="data">
+              <h4>اكاديمية 6 اكتوبر</h4>
+              <span>عدد الفروع : 8</span>
+            </div>
+          </div>
+          <div class="status">
+            <div class="img">
+              <img src="assets/images/icons/approved.svg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="primary-outline-button add-notification">
+            <div class="img">
+              <img src="assets/images/icons/notifiaction.svg" alt="">
+              <span>+</span>
+            </div>
+            <span>إضافة إشعار</span>
+          </button>
+          <button class="primary-button">
+            <div class="img">
+              <img src="assets/images/icons/video.svg" alt="">
+            </div>
+          </button>
+          <button class="primary-third-button">
+            <div class="img">
+              <img src="assets/images/icons/greenDots.svg" alt="">
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

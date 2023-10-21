@@ -1,0 +1,12 @@
+<div class="breadcrumb-box">
+  <div class="img">
+    <img [src]="icon" alt="">
+  </div>
+  <ul class="list-unstyled flex ai-c">
+    <li *ngFor="let item of list;let i = index">
+      <a *ngIf="item.url" [routerLink]="item.url">{{item.name}}</a>
+      <span *ngIf="!item.url">{{item.name}}</span>
+      <img class="mx-10" src="assets/images/icons/breadcrumbArrow.svg" alt="" *ngIf="list.length > 1 && i + 1 != list.length">
+    </li>
+  </ul>
+</div>

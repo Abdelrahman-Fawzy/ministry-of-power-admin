@@ -1,0 +1,41 @@
+<aside class="sidebar flex flex-col gap-15">
+  <div class="header">
+    <div class="logo center-flex">
+      <img src="assets/images/main_assets/logo.png" alt="">
+    </div>
+  </div>
+  <div class="list flex flex-col jc-sb gap-20 full-height">
+    <ul class="list-unstyled">
+      <li>
+        <a routerLink="/users" [routerLinkActive]="'routerActive'" [routerLinkActiveOptions]="{exact: true}">
+          <div class="img">
+            <img src="assets/images/icons/ChartPieSlice.svg" alt="">
+          </div>
+          <span>المستخدمين</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/requests" [routerLinkActive]="'routerActive'" [routerLinkActiveOptions]="{exact: true}">
+          <div class="img">
+            <img src="assets/images/icons/ShoppingBagOpen.svg" alt="">
+          </div>
+          <span>الطلبات</span>
+        </a>
+      </li>
+    </ul>
+    <div class="logout">
+      <div class="user">
+        <div class="img">
+          <img src="assets/images/dummyUser.png" alt="">
+        </div>
+        <span>Admin</span>
+      </div>
+      <button class="transparent-button logout-button">
+        <div class="img">
+          <img src="assets/images/icons/log-out.svg" alt="">
+        </div>
+        <span>تسجيل الخروج</span>
+      </button>
+    </div>
+  </div>
+</aside>
