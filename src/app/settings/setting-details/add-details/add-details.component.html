@@ -1,0 +1,56 @@
+<div class="modal-body">
+  <form>
+    <div class="form-group">
+      <label for="attachName">اسم المرفق</label>
+      <input type="text" class="form-control" id="attachName">
+    </div>
+    <div class="form-group">
+      <label for="attachType">نوع المرفق</label>
+      <select id="attachType" class="form-control">
+        <option>test</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>يطبق على حساب</label>
+      <div class="flex ai-c jc-sb">
+        <label class="checkboxContainer">
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+          خاص
+        </label>
+        <label class="checkboxContainer">
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+          حكومى
+        </label>
+        <label class="checkboxContainer">
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+          نقابات
+        </label>
+        <label class="checkboxContainer">
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+          جمعيات
+        </label>
+        <label class="checkboxContainer">
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+          مدرب
+        </label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="attachDesc">وصف المرفق</label>
+      <textarea class="form-control" id="attachDesc" rows="5" placeholder="اكتب وصف المرفق بالكامل"></textarea>
+    </div>
+    <div class="actions center-flex gap-15">
+      <button class="primary">
+        حفظ
+      </button>
+      <button class="white" (click)="closeModal()">
+        خروج
+      </button>
+    </div>
+  </form>
+</div>

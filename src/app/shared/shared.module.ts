@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { TableModule } from 'primeng/table';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 
@@ -22,7 +23,8 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
     FormsModule,
     RouterModule,
     TableModule,
-    BsDropdownModule
+    BsDropdownModule,
+    ModalModule.forRoot(),
   ],
   exports: [
     LayoutComponent,
@@ -32,7 +34,8 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
     FormsModule,
     ReactiveFormsModule,
     TableModule,
-    BsDropdownModule
+    BsDropdownModule,
+    ModalModule
   ]
 })
 export class SharedModule { }

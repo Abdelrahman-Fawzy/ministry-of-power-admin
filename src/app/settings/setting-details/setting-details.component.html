@@ -1,0 +1,57 @@
+<app-breadcrumb [icon]="'assets/images/icons/ShoppingBagOpen.svg'" [list]="breadCrumbList"></app-breadcrumb>
+
+<div class="container-white-box">
+  <div class="header flex jc-sb ai-c">
+    <h5>المرفقات الخاصة بانشاء حساب جديد</h5>
+    <button class="white-button">
+      <div class="img">
+        <img src="assets/images/icons/arrow-left.svg" alt="">
+      </div>
+      <span (click)="addAttachment()">اضافة مرفق جديد</span>
+    </button>
+  </div>
+  <div class="body">
+    <div class="row">
+      <div class="col-lg-3" *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]">
+        <div class="detail">
+          <div class="header">
+            <h5>نشاط التدريب المهنى</h5>
+            <button class="primary-third-button">
+              <div class="img">
+                <img src="assets/images/icons/brownDots.svg" alt="">
+              </div>
+            </button>
+          </div>
+          <div class="body">
+            <div class="items">
+              <div class="item">
+                <div class="img">
+                  <img src="assets/images/icons/blac_correct.svg" alt="">
+                </div>
+                <span>خاص</span>
+              </div>
+              <div class="item">
+                <div class="img">
+                  <img src="assets/images/icons/blac_correct.svg" alt="">
+                </div>
+                <span>حكومى</span>
+              </div>
+              <div class="item">
+                <div class="img">
+                  <img src="assets/images/icons/blac_correct.svg" alt="">
+                </div>
+                <span>نقابات</span>
+              </div>
+              <div class="item">
+                <div class="img">
+                  <img src="assets/images/icons/blac_correct.svg" alt="">
+                </div>
+                <span>جمعيات</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

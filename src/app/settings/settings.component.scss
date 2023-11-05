@@ -1,0 +1,31 @@
+.brown_bordered_box {
+  border-radius: 20px;
+  border: 1px solid #964D22;
+  background: rgba(150, 77, 34, 0.10);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  .body {
+    width: 100%;
+    a {
+      color: #202447;
+      font-size: 18px;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    span {
+      font-size: 12px;
+      font-weight: 400;
+      color: #718EBF;
+    }
+  }
+}
