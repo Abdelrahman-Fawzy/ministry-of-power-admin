@@ -1,7 +1,7 @@
 <app-breadcrumb [icon]="'assets/images/icons/ShoppingBagOpen.svg'" [list]="breadCrumbList"></app-breadcrumb>
 
 <div class="request-table">
-  <p-table [value]="requests" (sortFunction)="customSort($event)" [customSort]="true" [(selection)]="selectedProducts" dataKey="code">
+  <p-table [value]="requests.data" (sortFunction)="customSort($event)" [customSort]="true" [(selection)]="selectedProducts" dataKey="code">
     <ng-template pTemplate="header">
         <tr>
             <th>
@@ -71,21 +71,21 @@
                   <img src="assets/images/dummyRequest.png" alt="">
                 </div>
                 <div class="info">
-                  <h5>اكاديمية 6 أكتوبر</h5>
-                  <span>jenny.wilson@gmail.com</span>
+                  <h5>{{request.name}}</h5>
+                  <span>{{request.workEmail}}</span>
                 </div>
               </div>
             </td>
             <td>خاص</td>
             <td>01158202283</td>
-            <td>28674298</td>
+            <td>{{request.faxNumber}}</td>
             <td class="status">
               <span *ngIf="request.status == 'rejected'" class="rejected">مرفوض</span>
               <span *ngIf="request.status == 'pending'" class="pending">انتظار</span>
               <span *ngIf="request.status == 'full-rejected'" class="full-rejected">رفض نهائى</span>
               <span *ngIf="request.status == 'accepted'" class="accepted">مقبول</span>
             </td>
-            <td>عنوان الشركة بالكامل هنا</td>
+            <td>{{request.address}}</td>
             <td>6</td>
             <td>
               <button class="download-attachments">
@@ -103,7 +103,7 @@
               </button>
               <ul id="actions-list" *dropdownMenu class="dropdown-menu"
                   role="menu" aria-labelledby="button-animated">
-                <li role="menuitem"><a class="dropdown-item" routerLink="/request-details/1">عرض الطلب</a></li>
+                <li role="menuitem"><a class="dropdown-item" [routerLink]="'/request-details/' + request.id">عرض الطلب</a></li>
               </ul>
             </td>
         </tr>

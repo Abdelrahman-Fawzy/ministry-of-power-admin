@@ -8,7 +8,8 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { TableModule } from 'primeng/table';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ModalModule } from 'ngx-bootstrap/modal';
-
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
+import { RequestHeadersInterceptor } from './interceptors/request-headers.interceptor';
 
 
 @NgModule({
@@ -20,17 +21,26 @@ import { ModalModule } from 'ngx-bootstrap/modal';
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    HttpClientModule,
     FormsModule,
     RouterModule,
     TableModule,
     BsDropdownModule,
     ModalModule.forRoot(),
   ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: RequestHeadersInterceptor,
+      multi: true
+    },
+  ],
   exports: [
     LayoutComponent,
     SidebarComponent,
     BreadcrumbComponent,
     RouterModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     TableModule,
